@@ -670,7 +670,7 @@ typedef NS_ENUM(NSInteger, PSWebSocketDriverState) {
             }
             
             // inflate if necessary
-            if(_pmdEnabled && !frame->control && (frame->rsv1 || (_initalFrame && _initialFrame->rsv1))) {
+            if(_pmdEnabled && !frame->control && (frame->rsv1 || (_initialFrame && _initialFrame->rsv1))) {
                 // reset inflater if we need to
                 if((_pmdClientNoContextTakeover && _mode == PSWebSocketModeServer) ||
                    (_pmdServerNoContextTakeover && _mode == PSWebSocketModeClient)) {
