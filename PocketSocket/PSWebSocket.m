@@ -186,6 +186,11 @@
         case NSURLNetworkServiceTypeVideo:
             networkServiceType = NSStreamNetworkServiceTypeVideo;
             break;
+        case NSURLNetworkServiceTypeCallSignaling:
+            networkServiceType = NSStreamNetworkServiceTypeCallSignaling;
+        case NSURLNetworkServiceTypeResponsiveData:
+            networkServiceType = NSStreamNetworkServiceTypeBackground;
+            break;
         }
         
         _inputStream = CFBridgingRelease(readStream);
