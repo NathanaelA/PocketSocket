@@ -681,9 +681,7 @@ void PSWebSocketServerAcceptCallback(CFSocketRef s, CFSocketCallBackType type, C
 #pragma mark - Dealloc
 
 - (void)dealloc {
-    [self executeWorkAndWait:^{
-        [self disconnect:YES];
-    }];
+    [self disconnect:YES];
 }
 
 @end
